@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "C4QRootViewController.h"
+#import "C4QSelectedColorProtocol.h"
+#import "C4QColorPickerViewController.h"
 
-@interface C4QViewController : C4QRootViewController
-
+@interface C4QViewController : C4QRootViewController <C4QSelectedColorProtocol>
 
 @end
 

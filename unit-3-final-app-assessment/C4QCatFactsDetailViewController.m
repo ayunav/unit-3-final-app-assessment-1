@@ -8,7 +8,7 @@
 
 #import "C4QCatFactsDetailViewController.h"
 
-#define CAT_GIF_URL @"http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
+#define CAT_GIF_URL @"http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC"
 
 @interface C4QCatFactsDetailViewController ()
 

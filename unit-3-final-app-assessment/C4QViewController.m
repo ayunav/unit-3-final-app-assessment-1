@@ -10,8 +10,25 @@
 
 @interface C4QViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *onwardsButton;
+
 @end
 
 @implementation C4QViewController
 
+- (void)didSelectColor:(UIColor *)color {
+    self.view.backgroundColor = color;
+    if (color == [UIColor greenColor]) {
+        self.onwardsButton.hidden = NO; 
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"coloPickerSegueIdentifier"]) {
+        C4QColorPickerViewController *colorPickerVC = segue.destinationViewController;
+        colorPickerVC.delegate = self;
+    }
+}
+
 @end
+

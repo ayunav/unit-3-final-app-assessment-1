@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="C4QCatFactCustomTableViewCellIdentifier" rowHeight="185" id="KGk-i7-Jjw" customClass="C4QCatFactTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="184"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmU-OQ-1QQ">
+                        <rect key="frame" x="18" y="16" width="380" height="168"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nek-1v-136" userLabel="SaveFactButton">
+                        <rect key="frame" x="406" y="65" width="35" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="RS1-TF-3e0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="1" green="0.5708884327" blue="0.0097484861660000009" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CmU-OQ-1QQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="CRi-aB-Zdi"/>
+                    <constraint firstItem="Nek-1v-136" firstAttribute="centerY" secondItem="CmU-OQ-1QQ" secondAttribute="centerY" id="Era-wD-Jnw"/>
+                    <constraint firstItem="Nek-1v-136" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="8" id="KiH-nZ-Avk"/>
+                    <constraint firstItem="Nek-1v-136" firstAttribute="top" secondItem="CmU-OQ-1QQ" secondAttribute="top" id="M1j-BG-Lei"/>
+                    <constraint firstItem="Nek-1v-136" firstAttribute="leading" secondItem="CmU-OQ-1QQ" secondAttribute="trailing" constant="8" id="ODJ-kM-4D9"/>
+                    <constraint firstItem="CmU-OQ-1QQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="Obn-qq-MLp"/>
+                    <constraint firstItem="CmU-OQ-1QQ" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="8" id="Tkn-4v-OrO"/>
+                    <constraint firstItem="Nek-1v-136" firstAttribute="bottom" secondItem="CmU-OQ-1QQ" secondAttribute="bottom" id="VIL-gW-p1k"/>
+                    <constraint firstItem="Nek-1v-136" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="W4m-tX-KCi"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Era-wD-Jnw"/>
+                        <exclude reference="M1j-BG-Lei"/>
+                        <exclude reference="VIL-gW-p1k"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="catFactLabel" destination="CmU-OQ-1QQ" id="tbL-PA-rUa"/>
+                <outlet property="saveFactButton" destination="Nek-1v-136" id="22t-A3-pPs"/>
+            </connections>
+            <point key="canvasLocation" x="330.5" y="366.5"/>
+        </tableViewCell>
+    </objects>
+</document>
