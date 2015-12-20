@@ -51,11 +51,11 @@
                                     <segue destination="Q41-6z-oZL" kind="show" id="QrX-v9-SuD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-HI-FAY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-HI-FAY">
                                 <rect key="frame" x="233" y="282" width="135" height="36"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Select a Color">
+                                        <fragment content="Select Color">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="0.5708884327" blue="0.0097484861660000009" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
