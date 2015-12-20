@@ -38,8 +38,9 @@
     [defaults setObject:catFactsArrayToSave forKey:savedCatFactsKey];
     
     [defaults synchronize];
-
-    [self showAlert]; 
+    
+    [self showAlert];
+   
 }
 
 - (void)showAlert {

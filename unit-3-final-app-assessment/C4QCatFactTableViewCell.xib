@@ -21,13 +21,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nek-1v-136" userLabel="SaveFactButton">
+                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nek-1v-136" userLabel="SaveFactButton">
                         <rect key="frame" x="406" y="65" width="35" height="54"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="RS1-TF-3e0"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                        <state key="normal" title="+">
+                        <state key="normal">
                             <color key="titleColor" red="1" green="0.5708884327" blue="0.0097484861660000009" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <connections>
