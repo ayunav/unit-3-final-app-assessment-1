@@ -90,12 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				2903717E1C2606C7008973AC /* CustomCell */,
-				8D610E941C2477EB00AADDC2 /* C4QCatFactsTableViewController.h */,
-				8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */,
-				2903717B1C2606B7008973AC /* C4QSavedCatFactsTableViewController.h */,
-				2903717C1C2606B7008973AC /* C4QSavedCatFactsTableViewController.m */,
-				8DA03F721C2499F400328B53 /* C4QCatFactsDetailViewController.h */,
-				8DA03F731C2499F400328B53 /* C4QCatFactsDetailViewController.m */,
+				2903717F1C274CD4008973AC /* CatFactsTVC */,
+				290371801C274CE8008973AC /* DetailVC */,
+				290371811C274CF3008973AC /* SavedFactsTVC */,
 			);
 			name = CatFacts;
 			sourceTree = "<group>";
@@ -108,6 +105,33 @@
 				290371761C25F146008973AC /* C4QCatFactTableViewCell.xib */,
 			);
 			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		2903717F1C274CD4008973AC /* CatFactsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				8D610E941C2477EB00AADDC2 /* C4QCatFactsTableViewController.h */,
+				8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */,
+			);
+			name = CatFactsTVC;
+			sourceTree = "<group>";
+		};
+		290371801C274CE8008973AC /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				8DA03F721C2499F400328B53 /* C4QCatFactsDetailViewController.h */,
+				8DA03F731C2499F400328B53 /* C4QCatFactsDetailViewController.m */,
+			);
+			name = DetailVC;
+			sourceTree = "<group>";
+		};
+		290371811C274CF3008973AC /* SavedFactsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				2903717B1C2606B7008973AC /* C4QSavedCatFactsTableViewController.h */,
+				2903717C1C2606B7008973AC /* C4QSavedCatFactsTableViewController.m */,
+			);
+			name = SavedFactsTVC;
 			sourceTree = "<group>";
 		};
 		4E15730958CE00A7A68699CF /* Frameworks */ = {

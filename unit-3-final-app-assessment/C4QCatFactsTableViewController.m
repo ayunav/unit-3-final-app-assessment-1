@@ -121,7 +121,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     C4QCatFactsDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"C4QCatFactsDetailVC"];
+    
     detailVC.catFact = self.catFacts[indexPath.row];
+    
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

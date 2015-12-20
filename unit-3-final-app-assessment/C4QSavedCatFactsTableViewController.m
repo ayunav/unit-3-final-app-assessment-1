@@ -80,15 +80,22 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    
-    if ([segue.identifier isEqualToString:@"C4QSavedCatFactsToDetailVCSegueIdentifier"]) {
-        C4QCatFactsDetailViewController *detailVC = segue.destinationViewController;
-        detailVC.catFact = self.savedCatFacts[indexPath.row];
-    }
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    C4QCatFactsDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"C4QCatFactsDetailVC"];
+//    detailVC.catFact = self.savedCatFacts[indexPath.row];
+//    [self.navigationController pushViewController:detailVC animated:YES];
+//}
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    
+//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//    
+//    if ([segue.identifier isEqualToString:@"C4QSavedCatFactsToDetailVCSegueIdentifier"]) {
+//        C4QCatFactsDetailViewController *detailVC = segue.destinationViewController;
+//        detailVC.catFact = self.savedCatFacts[indexPath.row];
+//    }
+//}
 
 #pragma mark - delete row 
 
