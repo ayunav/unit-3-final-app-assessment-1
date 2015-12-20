@@ -19,32 +19,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UINib *nib = [UINib nibWithNibName:@"C4QCatFactTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"C4QCatFactCustomTableViewCellIdentifier"];
-    
-    self.tableView.estimatedRowHeight = 44.0;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-  
-    self.navigationItem.title = @"Saved Cat Facts";
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
+   
+    [self setupUI];
     
     self.savedCatFacts = [[NSMutableArray alloc] init];
     
     self.savedCatFacts = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedCatFactsArray"];
-    
-
-//    [self.navigationController.navigationBar setTintColor:[UIColor orangeColor]];
-//    self.navigationController.navigationItem.title = @"Saved Cat Facts";
-}
-
-- (void)done {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)doneButtonTapped:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+# pragma mark - UI
+
+- (void)setupUI {
+    [self.navigationController.navigationBar setTintColor:[UIColor orangeColor]];
+    self.navigationController.navigationBarHidden = NO;
+}
+
+// http://stackoverflow.com/questions/9827126/change-the-uitableviewcell-height-according-to-amount-of-text
+
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 
 #pragma mark - Table view data source
@@ -54,13 +59,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.savedCatFacts.count;
+    return 10;
+    //return self.savedCatFacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    C4QCatFactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"C4QCatFactCustomTableViewCellIdentifier" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SavedCatFactsCellIdentifier" forIndexPath:indexPath];
  
-    cell.textLabel.text = self.savedCatFacts[indexPath.row];
+    cell.textLabel.text = @"Saved Cat Fact Template Label";
+    //cell.textLabel.text = self.savedCatFacts[indexPath.row];
     
     return cell;
 }
