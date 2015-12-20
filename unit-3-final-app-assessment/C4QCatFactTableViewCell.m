@@ -7,6 +7,7 @@
 //
 
 #import "C4QCatFactTableViewCell.h"
+#import "C4QSavedCatFactsTableViewController.h"
 
 #define savedCatFactsKey @"savedFacts"
 
@@ -52,7 +53,10 @@
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
                                                  style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction *action) {
-                                                   [alert dismissViewControllerAnimated:YES completion:nil];
+
+                                                   C4QSavedCatFactsTableViewController *savedFactsTVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SavedCatFactsTableVC"];
+                                                   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:savedFactsTVC];
+                                                   [self.window.rootViewController presentViewController:navigationController animated:YES completion:^{}];
                                                }];
     
     [alert addAction:ok];

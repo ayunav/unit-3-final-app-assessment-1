@@ -249,7 +249,7 @@
                     <navigationItem key="navigationItem" title="Cat Facts" id="Wcl-Wy-q65">
                         <barButtonItem key="rightBarButtonItem" title="Saved" id="brH-Cl-c2U">
                             <connections>
-                                <segue destination="wMh-VM-U9k" kind="presentation" id="wZk-Pr-G4s"/>
+                                <segue destination="wMh-VM-U9k" kind="presentation" identifier="CatFactsTVCToSavedFactsTVCSegueIdentifier" id="wZk-Pr-G4s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
