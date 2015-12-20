@@ -30,6 +30,9 @@
                         <state key="normal" title="+">
                             <color key="titleColor" red="1" green="0.5708884327" blue="0.0097484861660000009" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="saveFactButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cZU-Jm-mh3"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

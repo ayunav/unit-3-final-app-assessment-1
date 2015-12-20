@@ -12,6 +12,7 @@
 #import "C4QCatFactsDetailViewController.h"
 
 #define CAT_API_URL @"http://catfacts-api.appspot.com/api/facts?number=100"
+#define savedCatFactsKey @"savedFacts"
 
 @interface C4QCatFactsTableViewController ()
 
@@ -73,19 +74,6 @@
     }];
 }
 
-- (IBAction)saveFact:(UIButton *)sender {
-    
-}
-
-/*     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
- NSArray *savedFactsArray = @[];
- [defaults setObject:savedFactsArray forKey:@"savedFacts"];
- 
- NSMutableArray *meowArr = [savedFactsArray mutableCopy];
- // [meowArr addObject:catsTableVC.tableView[indexPath.row]];
- [defaults synchronize];
-*/
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -101,11 +89,9 @@
     
     C4QCatFactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"C4QCatFactCustomTableViewCellIdentifier" forIndexPath:indexPath];
     
-    cell.catFactLabel.text = self.catFacts[indexPath.row];
+    cell.myFavCatFact = self.catFacts[indexPath.row];
     
-    cell.saveFactButton.tag = indexPath.row;
-    [cell.saveFactButton addTarget:self action:@selector(saveFact:)
-             forControlEvents:UIControlEventTouchUpInside];
+    cell.catFactLabel.text = self.catFacts[indexPath.row];
     
     return cell;
 }

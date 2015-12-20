@@ -10,6 +10,8 @@
 #import "C4QCatFactTableViewCell.h"
 #import "C4QCatFactsDetailViewController.h"
 
+#define savedCatFactsKey @"savedFacts"
+
 @interface C4QSavedCatFactsTableViewController ()
 
 @property (nonatomic) NSMutableArray *savedCatFacts;
@@ -25,7 +27,7 @@
     
     self.savedCatFacts = [[NSMutableArray alloc] init];
     
-    self.savedCatFacts = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedCatFactsArray"];
+    self.savedCatFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,15 +62,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
-    //return self.savedCatFacts.count;
+    return self.savedCatFacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SavedCatFactsCellIdentifier" forIndexPath:indexPath];
  
-    cell.textLabel.text = @"Saved Cat Fact Template Label";
-    //cell.textLabel.text = self.savedCatFacts[indexPath.row];
+    cell.textLabel.text = self.savedCatFacts[indexPath.row];
     
     return cell;
 }

@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *saveFactButton;
 
+@property (nonatomic) NSString *myFavCatFact;
+
 @end

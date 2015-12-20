@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <AFNetworking/AFNetworking.h>
 
-
 @interface C4QCatFactsTableViewController : UITableViewController
 
 @end
