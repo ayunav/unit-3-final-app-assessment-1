@@ -28,6 +28,10 @@
     [self populateTableViewWithData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
 # pragma mark - UI
 
 - (void)setupUI {
@@ -96,13 +100,16 @@
     
     cell.catFactLabel.text = self.catFacts[indexPath.row];
     
+    [cell.saveFactButton setHidden:NO];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    
     NSArray *savedFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
     
     if (savedFacts) {
         for (NSString *fact in savedFacts) {
             if ([fact isEqualToString:cell.catFactLabel.text]) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                cell.saveFactButton.imageView.hidden = YES;
+                [cell.saveFactButton setHidden:YES];
             }
             [cell.saveFactButton setImage:[UIImage imageNamed:@"add_icon_16"] forState:UIControlStateNormal];
         }

@@ -25,9 +25,13 @@
    
     [self setupUI];
     
-    self.savedCatFacts = [[NSMutableArray alloc] init];
+    NSArray *savedFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
+    self.savedCatFacts = [NSMutableArray arrayWithArray:savedFacts];
+
     
-    self.savedCatFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
+//    self.savedCatFacts = [[NSMutableArray alloc] init];
+//    
+//    self.savedCatFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +87,25 @@
     if ([segue.identifier isEqualToString:@"C4QSavedCatFactsToDetailVCSegueIdentifier"]) {
         C4QCatFactsDetailViewController *detailVC = segue.destinationViewController;
         detailVC.catFact = self.savedCatFacts[indexPath.row];
+    }
+}
+
+#pragma mark - delete row 
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+  
+        [self.savedCatFacts removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+        
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:savedCatFactsKey];
+        [[NSUserDefaults standardUserDefaults] setObject:self.savedCatFacts forKey:savedCatFactsKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
