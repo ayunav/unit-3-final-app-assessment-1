@@ -8,6 +8,7 @@
 
 #import "C4QSavedCatFactsTableViewController.h"
 #import "C4QCatFactTableViewCell.h"
+#import "C4QCatFactsDetailViewController.h"
 
 @interface C4QSavedCatFactsTableViewController ()
 
@@ -72,14 +73,16 @@
     return cell;
 }
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    if ([segue.identifier isEqualToString:@"C4QSavedCatFactsToDetailVCSegueIdentifier"]) {
+        C4QCatFactsDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.catFact = self.savedCatFacts[indexPath.row];
+    }
 }
-*/
 
 @end

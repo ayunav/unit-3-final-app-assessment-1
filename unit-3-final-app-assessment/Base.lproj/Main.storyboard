@@ -34,20 +34,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-HI-FAY">
-                                <rect key="frame" x="253" y="285" width="94" height="30"/>
-                                <state key="normal" title="Select a color"/>
-                                <connections>
-                                    <segue destination="Lli-Fk-jNo" kind="show" identifier="coloPickerSegueIdentifier" id="cOZ-Qr-xTh"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaA-n5-x5F">
-                                <rect key="frame" x="265" y="341" width="71" height="30"/>
-                                <state key="normal" title="Onward!!!!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LaA-n5-x5F">
+                                <rect key="frame" x="254" y="344" width="93" height="36"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Onward!!!!">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="Q41-6z-oZL" kind="show" id="QrX-v9-SuD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-HI-FAY">
+                                <rect key="frame" x="235" y="282" width="132" height="36"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Select a Color">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.5708884327" blue="0.0097484861660000009" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Lli-Fk-jNo" kind="show" identifier="coloPickerSegueIdentifier" id="cOZ-Qr-xTh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -158,6 +176,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3Vc-Rs-pYq" kind="show" identifier="C4QSavedCatFactsToDetailVCSegueIdentifier" id="Nhm-vV-nyF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -115,12 +115,6 @@
     C4QCatFactsDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"C4QCatFactsDetailVC"];
     detailVC.catFact = self.catFacts[indexPath.row];
     [self.navigationController pushViewController:detailVC animated:YES];
-    
-    
-//    if ([segue.identifier isEqualToString:@"C4QCatFactsDetailVCSegueIdentifier"]) {
-//        C4QCatFactsDetailViewController *detailVC = segue.destinationViewController;
-//        detailVC.catFact = self.catFacts[indexPath.row];
-//    }
 }
 
 
