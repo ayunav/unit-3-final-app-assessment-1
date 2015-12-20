@@ -102,7 +102,8 @@
     
     [cell.saveFactButton setHidden:NO];
     cell.accessoryType = UITableViewCellAccessoryNone;
-    
+    [cell.saveFactButton setImage:[UIImage imageNamed:@"add_icon_16"] forState:UIControlStateNormal];
+
     NSArray *savedFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
     
     if (savedFacts) {
