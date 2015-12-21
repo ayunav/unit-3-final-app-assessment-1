@@ -35,24 +35,27 @@
 # pragma mark - UI
 
 - (void)setupUI {
+    [self.navigationController.navigationBar setTintColor:[UIColor orangeColor]];
     [self.tableView setTintColor:[UIColor orangeColor]];
+
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 
     UINib *nib = [UINib nibWithNibName:@"C4QCatFactTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"C4QCatFactCustomTableViewCellIdentifier"];
-    
-    self.tableView.estimatedRowHeight = 44.0;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-    [self.navigationController.navigationBar setTintColor:[UIColor orangeColor]];
 }
 
-# pragma mark - populate with data 
+# pragma mark - populate tableview with data
 
 - (void)populateTableViewWithData {
     
     self.catFacts = [[NSMutableArray alloc]init];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // convert data in form of numbers to readable data
+    // http://stackoverflow.com/questions/26756258/request-failed-unacceptable-content-type-text-html-using-afnetworking-2-0
+    
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
@@ -101,8 +104,8 @@
     cell.catFactLabel.text = self.catFacts[indexPath.row];
     
     [cell.saveFactButton setHidden:NO];
-    cell.accessoryType = UITableViewCellAccessoryNone;
     [cell.saveFactButton setImage:[UIImage imageNamed:@"add_icon_16"] forState:UIControlStateNormal];
+    cell.accessoryType = UITableViewCellAccessoryNone;
 
     NSArray *savedFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
     

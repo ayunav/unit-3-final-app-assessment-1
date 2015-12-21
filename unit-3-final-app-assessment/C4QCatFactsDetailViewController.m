@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.catFactLabel.text = self.catFact;
     self.catGiphyImageView.clipsToBounds = YES;
     
@@ -34,6 +35,7 @@
 }
 
 -(void)getBackgroundImage {
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     [manager GET:CAT_GIF_URL

@@ -27,11 +27,6 @@
     
     NSArray *savedFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
     self.savedCatFacts = [NSMutableArray arrayWithArray:savedFacts];
-
-    
-//    self.savedCatFacts = [[NSMutableArray alloc] init];
-//    
-//    self.savedCatFacts = [[NSUserDefaults standardUserDefaults] objectForKey:savedCatFactsKey];
 }
 
 - (void)didReceiveMemoryWarning {

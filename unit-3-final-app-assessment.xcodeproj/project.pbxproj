@@ -89,22 +89,22 @@
 		2903717A1C26066D008973AC /* CatFacts */ = {
 			isa = PBXGroup;
 			children = (
-				2903717E1C2606C7008973AC /* CustomCell */,
+				2903717E1C2606C7008973AC /* CatFactCustomCell */,
 				2903717F1C274CD4008973AC /* CatFactsTVC */,
-				290371801C274CE8008973AC /* DetailVC */,
 				290371811C274CF3008973AC /* SavedFactsTVC */,
+				290371801C274CE8008973AC /* DetailVC */,
 			);
 			name = CatFacts;
 			sourceTree = "<group>";
 		};
-		2903717E1C2606C7008973AC /* CustomCell */ = {
+		2903717E1C2606C7008973AC /* CatFactCustomCell */ = {
 			isa = PBXGroup;
 			children = (
 				290371741C25F146008973AC /* C4QCatFactTableViewCell.h */,
 				290371751C25F146008973AC /* C4QCatFactTableViewCell.m */,
 				290371761C25F146008973AC /* C4QCatFactTableViewCell.xib */,
 			);
-			name = CustomCell;
+			name = CatFactCustomCell;
 			sourceTree = "<group>";
 		};
 		2903717F1C274CD4008973AC /* CatFactsTVC */ = {

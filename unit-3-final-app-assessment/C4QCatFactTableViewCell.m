@@ -55,8 +55,11 @@
                                                handler:^(UIAlertAction *action) {
 
                                                    C4QSavedCatFactsTableViewController *savedFactsTVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SavedCatFactsTableVC"];
+                                                   
                                                    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:savedFactsTVC];
+                                                   
                                                    [self.window.rootViewController presentViewController:navigationController animated:YES completion:^{}];
+                                                   
                                                }];
     
     [alert addAction:ok];
